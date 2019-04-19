@@ -11,7 +11,8 @@
     <title>Cvecara Sunce</title>
 </head>
 <body>
-    <header id="header">
+    <header>
+        <div class="header">
         <a href="index.html"><img src="img/LOGO.png"></a>
         <nav class="site-nav">
             <ul>
@@ -24,6 +25,7 @@
         <div class="menu-toggle">
             <div class="hamburger"></div>
         </div>
+    </div>
     </header>
 
 
@@ -137,13 +139,24 @@
 
     <div class="contact">
         <div id="contact_path"></div>
-        <h1>Kontaktirajte nas</h1>
+            <h1>Kontaktirajte nas</h1>
         <div class="line line3"></div>
-        <p>Mi se nalazimo u ulici: &nbsp;&nbsp;&nbsp; Radosava Mirkovića 1A 11300 Smederevo</p>
-        <p>Broj telefona: &nbsp;&nbsp;&nbsp; +381-60 / 60-10-165 <i class="fas fa-phone"></i></p>
-        <p>Instagram profil: &nbsp;&nbsp;&nbsp; instagram: cvecara_sunce_sd <i class="fab fa-instagram"></i></p>
-        <p>Facebook profil: &nbsp;&nbsp;&nbsp; www.facebook.com/cvecarasuncesd <i class="fab fa-facebook-f"></i></p>
-        <p>Whatsapp kontakt: &nbsp;&nbsp;&nbsp; +381-60 / 60-10-165 <i class="fab fa-whatsapp"></i></p>
+        <div class="text">
+        <div class="text_left">
+            <p>Mi se nalazimo u ulici:</p>
+            <p>Broj telefona:</p>
+            <p>Instagram profil:</p>
+            <p>Facebook profil:</p>
+            <p>Whatsapp kontakt:</p>
+        </div>
+        <div class="text_right">
+                <p>Radosava Mirkovića 1A 11300 Smederevo<i class="fas fa-globe-americas"></i></p>
+                <p>+381-60 / 60-10-165 <i class="fas fa-phone"></i></p>
+                <p>cvecara_sunce_sd <i class="fab fa-instagram"></i></p>
+                <p>www.facebook.com/cvecarasuncesd <i class="fab fa-facebook-f"></i></p>
+                <p>+381-60 / 60-10-165 <i class="fab fa-whatsapp"></i></p>
+            </div>
+        </div>
         <div id="map">
 
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2837.7543369378104!2d20.925106115509543!3d44.66337057909961!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475093c477f06f35%3A0x9a78ed4ae756df9f!2z0KDQsNC00L7RgdCw0LLQsCDQnNC40YDQutC-0LLQuNGb0LAgMUEsINCh0LzQtdC00LXRgNC10LLQvg!5e0!3m2!1ssr!2srs!4v1554232861491!5m2!1ssr!2srs"
@@ -163,18 +176,23 @@
 
         <div class="footer_down">
             <p>&copy; Copyright 2019 - Cvećara Sunce. All rights reserved.</p>
-            <p>Designed & Developed by Bojan Petkovic</p>
+            <p>Designed & Developed by <strong>Bojan Petkovic</strong></p>
         </div>
     </footer>
    
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script>
-        $('.menu-toggle').click(function () {
-            $('.site-nav').toggleClass('site-nav--open', 500);
+        $(function(){
+            $('.menu-toggle').click(function() {
+            $('.site-nav').toggleClass('site-nav--open');
             $(this).toggleClass('open');
-
-        })
+            })
+            $('.site-nav li').click(function(){
+            $('.site-nav').toggleClass('site-nav--open');
+            $('.menu-toggle').toggleClass('open');
+        });
+        });
     </script>
 </body>
 </html>
